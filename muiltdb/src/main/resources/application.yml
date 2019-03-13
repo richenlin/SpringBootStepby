@@ -1,0 +1,24 @@
+
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+  datasource:
+    name: h2
+    url: jdbc:h2:mem:foo
+    username: sa
+    password:
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    filters: config,stat,slf4j,conn
+    sessionStatEnable: true
+    profileEnable: true
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 1
+    testWhileIdle: true
+    maxOpenPreparedStatements: 20
