@@ -9,7 +9,8 @@ import java.util.Properties;
 
 @Slf4j
 public class ConnectionLogFilter extends FilterEventAdapter {
-    public void connection_connectionBefore(FilterChain chain, Properties info){
+    @Override
+    public void connection_connectBefore(FilterChain chain, Properties info){
         log.info("BEFORE CONNECTION!");
     }
 

@@ -10,7 +10,7 @@ spring:
     password:
     type: com.alibaba.druid.pool.DruidDataSource
 
-    filters: config,stat,slf4j,conn
+    filters: conn,config,stat,slf4j
     sessionStatEnable: true
     profileEnable: true
     maxActive: 20
