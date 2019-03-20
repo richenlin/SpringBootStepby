@@ -1,25 +1,23 @@
-package com.example.hotrestart.Controller;
+package com.example.hotrestart.controller;
 
+import com.example.hotrestart.entity.Brand;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author richen
- */
+ * @program: hotrestart
+ * @description: Hello
+ * @author: richen
+ * @create: 2019-03-14 11:32
+ **/
 @RestController
 @Slf4j
 public class Hello {
-    @GetMapping("/hello")
-    public String hello(){
-        log.info("11111111111111");
-        return  "hello world";
-    }
-
-    @RequestMapping("/test")
-    public String hello2(){
-        log.info("22222222222222");
-        return "dsfsdfdsfds";
+    @PostMapping("hello")
+    public String brand(@RequestBody Brand brand){
+        String name = brand.getName();
+        return name;
     }
 }

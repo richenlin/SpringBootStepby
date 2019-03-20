@@ -22,3 +22,10 @@ spring:
     validationQuery: select 1
     testWhileIdle: true
     maxOpenPreparedStatements: 20
+
+    druid:
+      filter:
+        stat:
+          enabled: true
+          log-slow-sql: true
+          slow-sql-millis: 2000
